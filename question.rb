@@ -13,7 +13,7 @@ class Question
     num1 = numbers.sample
     num2 = numbers.sample
     @solution = num1 + num2
-    puts "#{@current_player}: What does #{num1} plus #{num2} equal?"
+    puts "Player #{@current_player}: What does #{num1} plus #{num2} equal?"
     puts "Solution #{@solution}" # here for now...
   end
 

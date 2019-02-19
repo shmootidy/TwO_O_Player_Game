@@ -7,7 +7,6 @@ class Player
 
   def lose_life
     @lives -= 1
-    puts "This player has #{@lives} lives"
   end
 
 end
