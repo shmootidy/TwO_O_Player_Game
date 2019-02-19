@@ -21,6 +21,12 @@ class Game
       end
     end
     puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
+    @turn.switch_player
+
+    while player1.lives > 0 and player2.lives > 0
+      puts "----- NEW TURN -----"
+      next_turn
+    end
   end
 
 end
