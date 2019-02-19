@@ -1,18 +1,13 @@
 class Turn
   attr_reader :current_player, :good_response
 
+  @@turns = []
+
   def initialize
-    @current_player = 1
+    @current_player = @@turns.length % 2
     question = Question.new(@current_player)
     @good_response = question.good_response
-  end
-
-  def switch_player
-    if @current_player == 1
-      @current_player = 2
-    else
-      @current_player = 1
-    end
+    @@turns << 1
   end
 
 end

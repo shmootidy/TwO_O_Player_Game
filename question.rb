@@ -2,7 +2,7 @@ class Question
   attr_reader :good_response
 
   def initialize(current_player)
-    @current_player = current_player
+    @current_player = current_player + 1
     @question = generate_question
     @answer = gets.chomp.to_i
     @good_response = good_response?

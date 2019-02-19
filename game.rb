@@ -14,14 +14,13 @@ class Game
 
   def process_turn
     unless @turn.good_response
-      if @turn.current_player == 1
+      if @turn.current_player == 0
         @player1.lose_life
       else
         @player2.lose_life
       end
     end
     puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
-    @turn.switch_player
 
     while player1.lives > 0 and player2.lives > 0
       puts "----- NEW TURN -----"

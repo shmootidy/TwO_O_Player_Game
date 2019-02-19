@@ -1,5 +1,5 @@
 class Player
-  attr_reader :lives, :speak, :bark
+  attr_reader :lives
 
   def initialize
     @lives = 3
