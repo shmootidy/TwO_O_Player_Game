@@ -3,7 +3,6 @@ class Player
 
   def initialize
     @lives = 3
-    puts "caw!"
   end
 
   def lose_life
