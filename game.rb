@@ -41,6 +41,7 @@ class Game
 
   def print_end_message
     winning_score = @other_player == 1 ? "#{player1.lives}" : "#{player2.lives}" << "/3"
+    puts "And it was your last life..."
     puts ""
     puts "WE HAVE A WINNER!"
     puts "INTRODUCING THE NEW CHAMPION OF THE UNIVERSE!"

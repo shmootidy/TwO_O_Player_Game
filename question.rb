@@ -18,10 +18,11 @@ class Question
 
   def good_response?
     if @answer == @solution
-      puts "You got it!"
+      puts "You got it! PHEW!"
       true
     else
       puts "Oof! That's gonna cost you... The correct answer is #{@solution}."
+      puts "Sorry, Player #{@current_player}. You lost a life."
       false
     end
   end
