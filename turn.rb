@@ -4,7 +4,7 @@ class Turn
   @@turns = []
 
   def initialize
-    @current_player = @@turns.length % 2
+    @current_player = (@@turns.length % 2) + 1
     question = Question.new(@current_player)
     @good_response = question.good_response
     @@turns << 1
