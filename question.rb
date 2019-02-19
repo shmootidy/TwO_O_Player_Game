@@ -22,7 +22,7 @@ class Question
       puts "Hey! Good one."
       true
     else
-      puts "Nope. That's gonna cost you..."
+      puts "Oof! That's gonna cost you..."
       false
     end
   end
