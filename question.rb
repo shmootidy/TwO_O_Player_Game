@@ -1,9 +1,11 @@
 class Question
+  attr_reader :good_response
 
   def initialize
     @question = "#{generate_question}"
     @answer = gets.chomp.to_i
-    puts check_response
+    @good_response = good_response? # turn this into a conditional that ... does something
+    puts @good_response
   end
 
   def generate_question
@@ -12,10 +14,10 @@ class Question
     num2 = numbers.sample
     @solution = num1 + num2
     puts "What does #{num1} plus #{num2} equal?"
-    puts "Solution #{@solution}"
+    puts "Solution #{@solution}" # here for now...
   end
 
-  def check_response
+  def good_response?
     if @answer == @solution
       true
     else
