@@ -13,11 +13,13 @@ class Game
   end
 
   def process_turn
-    if @turn.good_response
-      puts @turn.current_player
+    unless @turn.good_response
+      if @turn.current_player == 'Player 1'
+        @player1.lose_life
+      else
+        @player2.lose_life
+      end
     end
-    # @turn.switch_player
-    # puts @turn.good_response
   end
 
 end
