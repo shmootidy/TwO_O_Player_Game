@@ -14,7 +14,6 @@ class Question
     num2 = numbers.sample
     @solution = num1 + num2
     puts "Player #{@current_player}: What does #{num1} plus #{num2} equal?"
-    puts "Solution #{@solution}" # here for now...
   end
 
   def good_response?

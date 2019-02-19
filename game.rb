@@ -28,19 +28,17 @@ class Game
       next_turn
     elsif player1.lives == 0
       puts "Player 2 wins with #{@player2.lives}/3"
-      puts "----- GAME OVER -----"
-      puts "Good bye!"
+      print_end_message
     else
-      puts "Player 2 wins with #{@player2.lives}/3"
-      puts "----- GAME OVER -----"
-      puts "Good bye!"
+      puts "Player 1 wins with #{@player1.lives}/3"
+      print_end_message
     end
-    # while player1.lives > 0 and player2.lives > 0
-    #   puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
-    #   puts "----- NEW TURN -----"
-    #   next_turn
-    # end
-    # if end message is here, it'll print as many times as this function runs, so...
   end
+
+  def print_end_message
+    puts "----- GAME OVER -----"
+    puts "Good bye!"
+  end
+
 
 end
