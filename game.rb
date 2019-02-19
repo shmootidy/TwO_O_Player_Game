@@ -13,9 +13,9 @@ class Game
   end
 
   def process_turn
-    current_player = @turn.current_player + 1
+    @current_player = @turn.current_player + 1
     unless @turn.good_response
-      if current_player == 1
+      if @current_player == 1
         @player1.lose_life
       else
         @player2.lose_life
@@ -26,16 +26,15 @@ class Game
       puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
       puts "----- NEW TURN -----"
       next_turn
-    elsif player1.lives == 0
-      puts "Player 2 wins with #{@player2.lives}/3"
-      print_end_message
     else
-      puts "Player 1 wins with #{@player1.lives}/3"
       print_end_message
     end
   end
 
   def print_end_message
+    @other_player = (@current_player) % 2 + 1
+    winning_score = @other_player == 1 ? "#{player1.lives}" : "#{player2.lives}" << "/3"
+    puts "Player #{@other_player} wins with " + winning_score
     puts "----- GAME OVER -----"
     puts "Good bye!"
   end
