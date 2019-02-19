@@ -5,6 +5,7 @@ class Turn
     @current_player = 1
     question = Question.new
     @good_response = question.good_response
+    # game.process_turn(@good_response, @current_player)
     switch_player
   end
 
@@ -12,7 +13,7 @@ class Turn
     if @current_player == 1
       @current_player = 2
     else
-      @current_player =1
+      @current_player = 1
     end
   end
 

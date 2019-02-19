@@ -2,10 +2,9 @@ class Question
   attr_reader :good_response
 
   def initialize
-    @question = "#{generate_question}"
+    @question = generate_question
     @answer = gets.chomp.to_i
-    @good_response = good_response? # turn this into a conditional that ... does something
-    puts @good_response # for development purposes only
+    @good_response = good_response?
   end
 
   def generate_question
