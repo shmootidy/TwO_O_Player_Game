@@ -5,8 +5,6 @@ class Turn
     @current_player = 1
     question = Question.new
     @good_response = question.good_response
-    # game.process_turn(@good_response, @current_player)
-    switch_player
   end
 
   def switch_player
