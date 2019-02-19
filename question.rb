@@ -1,7 +1,8 @@
 class Question
   attr_reader :good_response
 
-  def initialize
+  def initialize(current_player)
+    @current_player = current_player
     @question = generate_question
     @answer = gets.chomp.to_i
     @good_response = good_response?
@@ -12,7 +13,7 @@ class Question
     num1 = numbers.sample
     num2 = numbers.sample
     @solution = num1 + num2
-    puts "What does #{num1} plus #{num2} equal?"
+    puts "#{@current_player}: What does #{num1} plus #{num2} equal?"
     puts "Solution #{@solution}" # here for now...
   end
 

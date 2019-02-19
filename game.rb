@@ -13,10 +13,11 @@ class Game
   end
 
   def process_turn
-    puts @turn.current_player
-    @turn.switch_player
-    puts @turn.current_player
-    puts @turn.good_response
+    if @turn.good_response
+      puts @turn.current_player
+    end
+    # @turn.switch_player
+    # puts @turn.good_response
   end
 
 end
