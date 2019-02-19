@@ -5,7 +5,7 @@ class Question
     @question = "#{generate_question}"
     @answer = gets.chomp.to_i
     @good_response = good_response? # turn this into a conditional that ... does something
-    puts @good_response
+    puts @good_response # for development purposes only
   end
 
   def generate_question
